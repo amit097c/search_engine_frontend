@@ -1,0 +1,39 @@
+h1
+ {
+   font: Arial;
+   color: #333;
+
+ }
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-left: 17%;
+  }
+  
+  .suggestion {
+    color: #555;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .suggestion strong {
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .results ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .results li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .no-results {
+    color: red;
+    font-style: italic;
+  }
+  

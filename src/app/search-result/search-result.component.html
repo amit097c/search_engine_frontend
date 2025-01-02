@@ -1,0 +1,7 @@
+<h3>search-result!</h3>
+
+<div *ngIf="results.length > 0" class="results mt-4">
+    <ul>
+      <li *ngFor="let result of results">{{ result }}</li>
+    </ul>
+  </div>

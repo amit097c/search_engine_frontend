@@ -1,0 +1,33 @@
+<div class="container">
+    <h1>Search Engine</h1>
+  
+    <!-- Search Input -->
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter your search query..."
+      [(ngModel)] = "query"
+      (keyup.enter)="performSearch()"
+    />
+  
+    <button class="btn btn-primary mt-2" (click)="performSearch()">Search</button>
+  
+    <!-- Spell Check Suggestion -->
+    <div *ngIf="suggestion" class="suggestion mt-3">
+      Did you mean: <strong (click)="applySuggestion()">{{ suggestion }}</strong>?
+    </div>
+  
+    <!-- Search Results -->
+    <div *ngIf="results.length > 0" class="results mt-4">
+      <h3>Search Results:</h3>
+      <ul>
+        <li *ngFor="let result of results">{{ result }}</li>
+      </ul>
+    </div>
+  
+    <!-- No Results Found -->
+    <div *ngIf="results.length === 0 && query !== ''" class="no-results mt-4">
+      <p>No results found for "{{ query }}".</p>
+    </div>
+  </div>
+  
